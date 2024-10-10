@@ -4,7 +4,15 @@
         <title>State Facts</title>
     </head>
     <body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 
+  <div class="container-fluid">
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">homepage.html</a>
+      </li>
+	    
         <form action="/showFact">
           <select name="state"> <!-- add onchange="this.form.submit()" to submit/update the form when an option is selected.  Usefull for then displaying county options. -->
             {{ state_options }}
