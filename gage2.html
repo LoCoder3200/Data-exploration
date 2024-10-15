@@ -12,15 +12,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <a href="//corgis-edu.github.io/corgis/json/ufo_sightings/">here</a>
+  
+  
   
 	</head>
 	<body> 
 	
 	<h1> UFO Sightings Data </h1>
-	{% for s in states %} <!-- Loop through the list of states and add an option element for each state -->
-		<option value="{{ s }}">{{ s }}</option>
-    {% endfor %}
+	
 
 	<nav class="navbar navbar-expand-sm bg-light">
 
@@ -34,14 +33,10 @@
         <a class="nav-link" href="gage2.html">Findings</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="gage3.html">Data graph</a>
+        <a class="nav-link" href="gage3.html">Data Graph</a>
       </li>
     </ul>
   </div>
- 
-  
 
 </nav>
- <img src="mogger.jpg" alt= "a picture of alien from mewing">
- <img src="fien.jfif" alt= "a picture of alien from mewing">
 </body>
