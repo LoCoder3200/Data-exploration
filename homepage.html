@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
+
+
 	<head>
+	<title>Home</title>
 		
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,16 +15,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-  <a href="//corgis-edu.github.io/corgis/json/ufo_sightings/">here</a>
+  
+  
   
 	</head>
-	<body> 
+	<body style="background-color:LightGray;"> 
 	
 	<h1> UFO Sightings Data </h1>
-	{% for s in states %} <!-- Loop through the list of states and add an option element for each state -->
+	<!--{% for s in states %} <!-- Loop through the list of states and add an option element for each state 
 		<option value="{{ s }}">{{ s }}</option>
-    {% endfor %}
-
+    {% endfor %}-->
 	<nav class="navbar navbar-expand-sm bg-light">
 
   <div class="container-fluid">
@@ -34,7 +37,7 @@
         <a class="nav-link" href="gage2.html">Findings</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="gage3.html">Data graph</a>
+        <a class="nav-link" href="gage3.html">Data Graph</a>
       </li>
     </ul>
   </div>
@@ -42,6 +45,8 @@
   
 
 </nav>
- <img src="mogger.jpg" alt= "a picture of alien from mewing">
- <img src="fien.jfif" alt= "a picture of alien from mewing">
+ <img src="alien.jpg" alt= "a picture of alien from mewing">
+ <!--<img src="fien.jfif" alt= "a picture of alien from mewing">-->
+ <p>The data set that I read about was UFO sightings, I have recorded my findings in this website. The data was found in  <a href="https://corgis-edu.github.io/corgis/json/ufo_sightings/">here</a> . I used around 80,000 recorded ufo sightings that includes, length of encounter, shape, date and time of the encounter, and the latitude and longitude of the state that the encounter occured in.
+ There are no missing data points in my findings. The data was gathered by The National UFO Reporting center which was founded in 1974. The data is all reports from individuals who have witnessed a UFO related event with over 129 reports made in SB.<p>
 </body>
