@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% set active_page = "datagraph" %}
+
+{% block title %}Data Graph{% endblock %}
+
+{% block heading %}Data Graph{% endblock %}
+
+{% block body %}
+
+  <script>
+window.onload = function() {
+
+var dataPoints = [];
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light2",
+	title: {
+		text: "Duration of Ufo Sightings In January 2012"
+	},
+	axisY: {
+		title: "Seconds",
+		titleFontSize: 24,
+		includeZero: true
+	},
+	data: [{
+		type: "column",
+		yValueFormatString: "#,### seconds",
+		dataPoints: {{data}}
+	}]
+});
+
+
+	chart.render();
+
+}
+
+</script>
+
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"> </script>
+{% endblock %}

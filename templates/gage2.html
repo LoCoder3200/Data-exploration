@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+  
+{% set active_page = "findings" %}
+
+{% block title %}Findings{% endblock %}
+
+{% block heading %}Findings{% endblock %}
+
+{% block body %}
+
+    <form action="/findings">
+    <select name="state"> <!-- A select element creates a drop-down box with options to select from. Note: add onchange="this.form.submit()" to submit/update the form when an option is selected.  Usefull for then displaying county options. -->
+        {% for s in states %} <!-- Loop through the list of states and add an option element for each state -->
+         <option value="{{ s }}">{{ s }}</option>
+        {% endfor %}
+   </select>
+   <br><br>
+          <input type="submit" value="Longest sighting in this state!">
+   </form>
+   <div id="funFact">
+        <p>{{ funFact }}</p>
+   </div>
+
+<p>Some initial questions I had about the data was: Why is Lat/Long included? What was the earliest encounter? What was the shortest encounter? What was the longest encounter? What city had the most sightings in one year? 
+
+After some research I found that the Lat/Long is used to identify the state that the encounter happened, the earliest alien encounter happened in 1947, the shortest alien encounter was roughly 30 seconds long, the city that had the most sightings in one year was Phoenix, Arizona. </p>
+
+{% endblock %}
